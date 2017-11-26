@@ -11,4 +11,13 @@ header {
 img {
 	display: block;
 	margin: auto;
+	max-width: 80%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	img {
+		display: block;
+		margin: auto;
+		max-width: 30%;
+	}
 }
