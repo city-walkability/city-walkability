@@ -18,13 +18,22 @@ img {
 	img {
 		display: block;
 		margin: auto;
-		max-width: 45%;
+		max-width: 60%;
 	}
 }
 
 #mapid { 
-	height: 600px; 
+	height: 400px; 
 	max-width: 45%;
 	border-width: 10px;
 	margin: auto;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	#mapid { 
+		height: 400px; 
+		max-width: 60%;
+		border-width: 10px;
+		margin: auto;
+	}
 }
