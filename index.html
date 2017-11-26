@@ -26,13 +26,20 @@
 
   <script>
   var mymap = L.map('mapid').setView([19.09, 72.85], 10);
+  var popup = L.popup();
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     maxZoom: 18,
     id: 'mapbox.streets',
     accessToken: 'pk.eyJ1IjoiY2l0eS13YWxrYWJpbGl0eSIsImEiOiJjamFncnNkODUycHRnMzNuaW14eHE5d24yIn0.0ty0jyl5uuIF4fulta_vjg'
-}).addTo(mymap);
+    }).addTo(mymap);
+  function onMapClick(e) {
+    popup
+    .setLatLng(e.latlng)
+    .setContent("Garbage dump at " + e.latlng.toString() + ' has now been plotted')
+    .openOn(mymap);
+  }
+  mymap.on('click', onMapClick);
   </script>
-
 
 </html>
