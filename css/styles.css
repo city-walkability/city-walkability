@@ -22,7 +22,7 @@ img {
 	}
 }
 
-#mapid { 
+div#mapid { 
 	height: 400px; 
 	max-width: 45%;
 	border-width: 10px;
